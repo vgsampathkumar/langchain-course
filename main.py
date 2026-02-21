@@ -33,15 +33,4 @@ agent = create_agent(model=llm, tools=tools, response_format=AgentResponse)
 
 def main():
     print("Hello from langchain-course!")
-    result = agent.invoke(
-        {
-            "messages": HumanMessage(
-                content="search for 3 job postings for an ai engineer using langchain in the bay area on linkedin and list their details?"
-            )
-        }
-    )
-    print(result)
-
-
-if __name__ == "__main__":
-    main()
+    result = agent.invoke(git 
