@@ -2,15 +2,13 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-from langchain import OpenAI
-from langchain import hub
-from langchain.agents import AgentExecutor
-from langchain.agents.react.agent import create_react_agent
-from langchain.openai import ChatOpenAI
-from langchain_tavily import TavilySearch
+import langchainhub as hub
+from langchain_classic.agents import AgentExecutor, create_react_agent # Both in classic
+from langchain_openai import ChatOpenAI
+from langchain_community.tools.tavily_search import TavilySearchResults
 
-
-
+# Use TavilySearchResults for the current version
+tools = [TavilySearchResults()]
 
 def main():
     print("Hello from langchain-course!")
